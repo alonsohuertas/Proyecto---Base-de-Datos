@@ -26,4 +26,20 @@ PK: ID_Proveedor, Atributos: Nombre, Dirección, Teléfono
 
 
 CREATE TABLE Producto
-PK: ID_Producto, Atributos: Nombre, Descripción, Costo, ID_Proveedor (FK)
+PK: ID_Producto, Atributos: Nombre, Descripción, Costo, ID_Proveedor (FK), ID_Tipo_Producto (FK)
+
+
+CREATE TABLE Tipo_Producto
+PK: ID_Tipo_Producto, Atributos: Descripción, Especie
+
+
+CREATE TABLE Inventario
+PK: ID_Inventario, Atributos: ID_Producto (FK), Cantidad
+
+
+CREATE TABLE Factura
+PK: ID_Factura, Atributos: Fecha, Total, ID_Cliente (FK)
+
+
+CREATE TABLE Factura_Servicio
+PK: ID_Factura (FK), ID_Servicio (FK), Atributos: Cantidad
