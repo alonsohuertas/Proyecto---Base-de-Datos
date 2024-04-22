@@ -110,21 +110,19 @@ VALUES
 ('Purina', 'Cat Chow Gatitos', 'Alimento Cachorros', 7100, '3-101-150452', 2),
 ('Whiskas', 'Pescado', 'Alimento Adultos', 5700, '3-101-150452', 2),
 ('Whiskas', 'Carne', 'Alimento Adultos', 5600, '3-101-150452', 2),
-('Easygroom', 'Shampoo Madero Negro', 'Producto de Aseo', 7000, '3-105-217496', 11),
-('Bayer', 'Bolfo Anti-pulgas', 'Producto de Aseo', 9000, '3-105-217496', 11),
-('Propet', 'Talco', 'Producto de Aseo', 1800, '3-105-217496', 11),
+('Easygroom', 'Shampoo Madero Negro', 'Producto de Aseo', 7000, '3-105-217496', 7),
+('Bayer', 'Bolfo Anti-pulgas', 'Producto de Aseo', 9000, '3-105-217496', 7),
+('Propet', 'Talco', 'Producto de Aseo', 1800, '3-105-217496', 7),
 ('NexGard', 'Tabletas', 'Antiparasitario', 11300, '3-101-234704', 5),
 ('Bravecto', 'Tabletas', 'Antiparasitario', 12300, '3-101-234704', 5),
 ('Bravecto', 'Plus', 'Antiparasitario', 10700, '3-101-234704', 6),
 ('Bayer', 'Advantage Multi', 'Antiparasitario', 9100, '3-101-234704', 6),
-('Pfizer', 'Rabia', 'Vacuna', 11300, '3-105-430489', 3),
-('PetSafe', 'Correa Retráctil', 'Correa', 7800, '3-102-514394', 9),
-('PetLife', 'Abrigo', 'Ropa', 6000, '3-105-43048', 13),
-('Merck', 'Distemper', 'Vacuna', 9500, '3-101-128761', 3),
-('Merial', 'Frontline Plus', 'Antiparasitario', 8500, '3-101-234704', 6),
-('Nylabone', 'Bola con Sonido', 'Juguete', 3500, '3-105-430489', 8),
-('FURminator', 'Cepillo', 'Producto de Aseo', 4000, '3-105-217496', 11),
-('Purina', 'Pro Plan', 'Suplemento Nutricional', 14000, '3-101-234704', 15);
+('Nobivac', 'Rabia', 'Vacuna', 11300, '3-101-128761', 3),
+('Nobivac', 'Puppy DP', 'Vacuna', 10650, '3-101-128761', 3),
+('Nobivac', 'DAPPvL2', 'Vacuna', 10700, '3-101-128761', 3),
+('Vanguard', 'Plus 5', 'Vacuna', 8450, '3-101-128761', 4),
+('Canigen', 'MHA2L Triple', 'Vacuna', 9300, '3-101-128761', 4);
+
 
 
 INSERT INTO Tipo_Producto (Descripción, Especie) 
@@ -135,16 +133,8 @@ VALUES
 ('Vacuna', 'Gato'),
 ('Medicamento Antiparasitario', 'Perro'),
 ('Medicamento Antiparasitario', 'Gato'),
-('Juguete', 'Perro'),
-('Juguete', 'Gato'),
-('Accesorio', 'Perro'),
-('Accesorio', 'Gato'),
 ('Producto de Aseo', 'Perro'),
 ('Producto de Aseo', 'Gato'),
-('Ropa', 'Perro'),
-('Ropa', 'Gato'),
-('Suplemento Nutricional', 'Perro'),
-('Suplemento Nutricional', 'Gato');
 
 
 
