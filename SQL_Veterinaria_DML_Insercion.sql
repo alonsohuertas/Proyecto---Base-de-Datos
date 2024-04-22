@@ -92,14 +92,60 @@ VALUES
 ('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
 
 
-INSERT INTO Producto (Nombre, Descripción, Costo, ID_Proveedor, ID_Tipo_Producto)
+INSERT INTO Producto (Marca, Nombre, Descripción, Costo, ID_Proveedor, ID_Tipo_Producto)
 VALUES 
-();
+('NutriSource', 'Chicken & Rice', 'Alimento Adultos', 11200, '3-102-514394', 1),
+('NutriSource', 'S&M Chicken & Rice', 'Alimento Cachorros', 13000, '3-102-514394', 1),
+('NutriSource', 'Lamb Meal & Rice', 'Alimento Adultos', 12000, '3-102-514394', 1),
+('Purina', 'Pro Plan Sensitive Skin', 'Alimento Adultos', 16250, '3-102-514394', 1),
+('Propet', 'Adulto', 'Alimento Adultos', 2500, '3-101-150452', 1),
+('Purina', 'Alpo', 'Alimento Adultos', 3500, '3-101-150452', 1),
+('Pedigree', 'Adulto Nutricion Completa', 'Alimento Adultos', 6000, '3-101-150452', 1),
+('Ascan', 'Adulto', 'Alimento Adultos', 4200, '3-101-150452', 1),
+('Ascan', 'Cachorro', 'Alimento Cachorros', 3900, '3-101-150452', 1),
+('NutriSource', 'Cat & Kitten Chicken & Rice', 'Alimento Adultos', 12200, '3-102-514394', 2),
+('1st Choice', 'Indoor Vitality', 'Alimento Adultos', 14200, '3-102-514394', 2),
+('1st Choice', 'Healthy Start', 'Alimento Cachorros', 12200, '3-102-514394', 2),
+('Purina', 'Cat Chow Adultos Hogareños', 'Alimento Adultos', 6100, '3-101-150452', 2),
+('Purina', 'Cat Chow Gatitos', 'Alimento Cachorros', 7100, '3-101-150452', 2),
+('Whiskas', 'Pescado', 'Alimento Adultos', 5700, '3-101-150452', 2),
+('Whiskas', 'Carne', 'Alimento Adultos', 5600, '3-101-150452', 2),
+('Easygroom', 'Shampoo Madero Negro', 'Producto de Aseo', 7000, '3-105-217496', 11),
+('Bayer', 'Bolfo Anti-pulgas', 'Producto de Aseo', 9000, '3-105-217496', 11),
+('Propet', 'Talco', 'Producto de Aseo', 1800, '3-105-217496', 11),
+('NexGard', 'Tabletas', 'Antiparasitario', 11300, '3-101-234704', 5),
+('Bravecto', 'Tabletas', 'Antiparasitario', 12300, '3-101-234704', 5),
+('Bravecto', 'Plus', 'Antiparasitario', 10700, '3-101-234704', 6),
+('Bayer', 'Advantage Multi', 'Antiparasitario', 9100, '3-101-234704', 6),
+('Pfizer', 'Rabia', 'Vacuna', 11300, '3-105-430489', 3),
+('PetSafe', 'Correa Retráctil', 'Correa', 7800, '3-102-514394', 9),
+('PetLife', 'Abrigo', 'Ropa', 6000, '3-105-43048', 13),
+('Merck', 'Distemper', 'Vacuna', 9500, '3-101-128761', 3),
+('Merial', 'Frontline Plus', 'Antiparasitario', 8500, '3-101-234704', 6),
+('Nylabone', 'Bola con Sonido', 'Juguete', 3500, '3-105-430489', 8),
+('FURminator', 'Cepillo', 'Producto de Aseo', 4000, '3-105-217496', 11),
+('Purina', 'Pro Plan', 'Suplemento Nutricional', 14000, '3-101-234704', 15);
 
 
 INSERT INTO Tipo_Producto (Descripción, Especie) 
 VALUES 
-();
+('Alimento', 'Perro'),
+('Alimento', 'Gato'),
+('Vacuna', 'Perro'),
+('Vacuna', 'Gato'),
+('Medicamento Antiparasitario', 'Perro'),
+('Medicamento Antiparasitario', 'Gato'),
+('Juguete', 'Perro'),
+('Juguete', 'Gato'),
+('Accesorio', 'Perro'),
+('Accesorio', 'Gato'),
+('Producto de Aseo', 'Perro'),
+('Producto de Aseo', 'Gato'),
+('Ropa', 'Perro'),
+('Ropa', 'Gato'),
+('Suplemento Nutricional', 'Perro'),
+('Suplemento Nutricional', 'Gato');
+
 
 
 INSERT INTO Inventario (ID_Producto, Cantidad) 

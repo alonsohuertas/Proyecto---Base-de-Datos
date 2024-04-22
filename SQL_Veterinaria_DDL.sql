@@ -9,7 +9,7 @@ CREATE TABLE Cliente (
 Cedula VARCHAR(25),
 Nombre VARCHAR(50) NOT NULL,
 Apellido VARCHAR(50) NOT NULL,
-Ciudad VARCHAR(50),
+Ciudad VARCHAR(50) NULL,
 Telefono VARCHAR(20) NOT NULL,
 Correo VARCHAR(100) NOT NULL,
 CONSTRAINT PK_Cliente PRIMARY KEY (Cedula)
@@ -18,10 +18,11 @@ CONSTRAINT PK_Cliente PRIMARY KEY (Cedula)
 
 CREATE TABLE Mascota (
 ID_Mascota INT IDENTITY(1,1),
+Marca VARCHAR(50) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
 Especie VARCHAR(50) NOT NULL,
-Raza VARCHAR(50),
-Genero CHAR(1),
+Raza VARCHAR(50) NULL,
+Genero CHAR(1) NULL,
 Fecha_Nacimiento DATE,
 Cedula_Cliente VARCHAR(25),
 CONSTRAINT PK_Mascota PRIMARY KEY (ID_Mascota),
@@ -67,7 +68,7 @@ CONSTRAINT FK_Cita_Empleado FOREIGN KEY (Cedula_Empleado) REFERENCES Empleado (C
 CREATE TABLE Proveedor (
 ID_Proveedor VARCHAR(25),
 Nombre VARCHAR(50) NOT NULL,
-Ciudad VARCHAR(100),
+Ciudad VARCHAR(100) NULL,
 Telefono VARCHAR(20) NOT NULL,
 CONSTRAINT PK_Proveedor PRIMARY KEY (ID_Proveedor)
 );
@@ -75,8 +76,9 @@ CONSTRAINT PK_Proveedor PRIMARY KEY (ID_Proveedor)
 
 CREATE TABLE Producto (
 ID_Producto INT IDENTITY(1,1),
+Marca VARCHAR(50) NOT NULL,
 Nombre VARCHAR(25) NOT NULL,
-Descripción VARCHAR(100) NOT NULL,
+Descripción VARCHAR(100) NULL,
 Costo DECIMAL(10, 2) NOT NULL,
 ID_Proveedor VARCHAR(25),
 ID_Tipo_Producto INT,
