@@ -2,21 +2,21 @@
 --INSTRUCCIONES DML - Inserción de Datos
 
 
-INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono, Correo)
+INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono)
 VALUES
-('202790933', 'Ana', 'Castro', 'Ciudad Quesada', '85728260', 'ana.castro@gmail.com'),
-('201700653', 'Amy', 'Perez', 'Florencia', '60495621', 'amy.perez@hotmail.com'),
-('106420357', 'Mario', 'Rojas', 'Naranjo', '85017246', 'mario.rojas@outlook.com'),
-('202790934', 'Carlos', 'Morales', 'Ciudad Quesada', '85728261', 'carlos.morales@gmail.com'),
-('401700654', 'Luis', 'Fernandez', 'Zarcero', '60495622', 'luis.fernandez@hotmail.com'),
-('106420358', 'Patricia', 'Mendez', 'Quesada', '85017247', 'patricia.mendez@outlook.com'),
-('202790935', 'Gabriela', 'Ramirez', 'Fortuna', '85728262', 'gabriela.ramirez@gmail.com'),
-('101700655', 'Ricardo', 'Gonzalez', 'Venecia', '60495623', 'ricardo.gonzalez@hotmail.com'),
-('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248', 'sofia.navarro@outlook.com'),
-('202790936', 'Diego', 'Vargas', 'Pital', '85728263', 'diego.vargas@gmail.com'),
-('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624', 'andrea.salazar@hotmail.com'),
-('506420360', 'Jose', 'Ureña', 'La Tigra', '85017249', 'jose.urena@outlook.com'),
-('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264', 'daniela.quesada@gmail.com');
+('202790933', 'Ana', 'Castro', 'Ciudad Quesada', '85728260'),
+('201700653', 'Amy', 'Perez', 'Florencia', '60495621'),
+('106420357', 'Mario', 'Rojas', 'Naranjo', '85017246'),
+('202790934', 'Carlos', 'Morales', 'Ciudad Quesada', '85728261'),
+('401700654', 'Luis', 'Fernandez', 'Zarcero', '60495622'),
+('106420358', 'Patricia', 'Mendez', 'Quesada', '85017247'),
+('202790935', 'Gabriela', 'Ramirez', 'Fortuna', '85728262'),
+('101700655', 'Ricardo', 'Gonzalez', 'Venecia', '60495623'),
+('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248'),
+('202790936', 'Diego', 'Vargas', 'Pital', '85728263'),
+('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624'),
+('506420360', 'Jose', 'Ureña', 'La Tigra', '85017249'),
+('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264');
 
 
 INSERT INTO Mascota (Nombre, Especie, Raza, Genero, Fecha_Nacimiento, Cedula_Cliente) 
@@ -64,24 +64,25 @@ VALUES
 ('Radiografía', 24650),
 ('Ecografía', 31000),
 ('Análisis de laboratorio', 17600),
-('Peluquería canina', 9000),
+('Peluquería canina', 9000);
 ('Limpieza dental', 13500),
 ('Corte de uñas', 2500);
 
 
 INSERT INTO Cita (Fecha, Hora, Cedula_Cliente, ID_Mascota, Cedula_Empleado) 
 VALUES
-('2024-04-29', '15:30:00', '101700655', 11, '208040975'),
-('2024-05-03', '16:00:00', '106420358', 9, '302450485'), 
-('2024-05-04', '10:00:00', '201700653', 3, '204060507'), 
-('2024-05-06', '09:30:00', '202790935', 10, '104740904'),
-('2024-05-06', '10:30:00', '401700654', 8, '204060507'),
-('2024-05-06', '15:00:00', '106420357', 5, '104740904'),
-('2024-05-07', '14:00:00', '202790934', 7, '207340954');
+('2024-04-29', '15:30:00', '101700655', 11, '208040975', 6),
+('2024-04-30', '09:00:00', '202790933', 1, '10490456', 1),
+('2024-05-03', '16:00:00', '106420358', 9, '302450485', 4),
+('2024-05-04', '10:00:00', '201700653', 3, '204060507', 3),
+('2024-05-06', '09:30:00', '202790935', 10, '104740904', 5),
+('2024-05-06', '10:30:00', '401700654', 8, '204060507', 3),
+('2024-05-06', '15:00:00', '106420357', 5, '104740904', 5),
+('2024-05-07', '14:00:00', '202790934', 7, '207340954', 2);
 
 
 
-INSERT INTO Proveedor (ID_Proveedor, Nombre, Ciudad, Telefono) 
+INSERT INTO Proveedor (ID_Proveedor, Nombre, Direccion, Telefono) 
 VALUES 
 ('3-101-150452', 'Alimentos San Rafael', 'Alajuela', '22404086'),
 ('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela, Costa Rica', '64504756'),
@@ -90,18 +91,6 @@ VALUES
 ('3-102-514394', 'NutriPet', 'San José', '22705684'),
 ('3-105-217496', 'Solis Agropecuarios', 'Limón, Costa Rica', '86461657'),
 ('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
-
-
-INSERT INTO Tipo_Producto (Descripción, Especie) 
-VALUES 
-('Alimento', 'Perro'),
-('Alimento', 'Gato'),
-('Vacuna', 'Perro'),
-('Vacuna', 'Gato'),
-('Medicamento Antiparasitario', 'Perro'),
-('Medicamento Antiparasitario', 'Gato'),
-('Producto de Aseo', 'Perro'),
-('Producto de Aseo', 'Gato');
 
 
 INSERT INTO Producto (Marca, Nombre, Descripción, Costo, ID_Proveedor, ID_Tipo_Producto)
@@ -136,9 +125,19 @@ VALUES
 ('Canigen', 'MHA2L Triple', 'Vacuna', 9300, '3-101-128761', 4);
 
 
-select * from producto
-delete from producto
-select * from tipo_producto
+
+INSERT INTO Tipo_Producto (Descripción, Especie) 
+VALUES 
+('Alimento', 'Perro'),
+('Alimento', 'Gato'),
+('Vacuna', 'Perro'),
+('Vacuna', 'Gato'),
+('Medicamento Antiparasitario', 'Perro'),
+('Medicamento Antiparasitario', 'Gato'),
+('Producto de Aseo', 'Perro'),
+('Producto de Aseo', 'Gato'),
+
+
 
 INSERT INTO Inventario (ID_Producto, Cantidad) 
 VALUES 
@@ -174,13 +173,12 @@ VALUES
 
 INSERT INTO Factura (Fecha, Total, ID_Cliente) 
 VALUES 
-('2024-04-29', 12500, '101700655'),
-('2024-04-30', 16100, '202790933'),
+('2024-04-21', 15000, '123456789'),
+('2024-04-22', 20000, '987654321');
 
 
-INSERT INTO Detalle_Factura (ID_Factura, ID_Servicio, ID_Producto, Cantidad) 
-VALUES 
-(1, 2, NULL, 1),
-(1, 3, NULL, 1),
-(2, 10, NULL, 1),
-(2, 1, 14, 1),
+INSERT INTO Factura_Servicio (ID_Factura, ID_Servicio, Cantidad) VALUES 
+(1, 1, 2),
+(1, 2, 1),
+(2, 1, 3),
+(2, 2, 2);

@@ -18,7 +18,6 @@ CONSTRAINT PK_Cliente PRIMARY KEY (Cedula)
 
 CREATE TABLE Mascota (
 ID_Mascota INT IDENTITY(1,1),
-Marca VARCHAR(50) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
 Especie VARCHAR(50) NOT NULL,
 Raza VARCHAR(50) NULL,
@@ -27,7 +26,7 @@ Fecha_Nacimiento DATE,
 Cedula_Cliente VARCHAR(25),
 CONSTRAINT PK_Mascota PRIMARY KEY (ID_Mascota),
 CONSTRAINT FK_Mascota_Cliente FOREIGN KEY (Cedula_Cliente) REFERENCES Cliente (Cedula),
-CONSTRAINT CHK_Especie CHECK (Especie IN ('Perro', 'Gato'))
+CONSTRAINT CHK_Especie CHECK (Especie IN ('Perro', 'Gato')),
 CONSTRAINT CHK_Genero CHECK (Genero IN ('M', 'H'))
 );
 
@@ -44,7 +43,7 @@ CONSTRAINT PK_Empleado PRIMARY KEY (Cedula)
 CREATE TABLE Servicio (
 ID_Servicio INT IDENTITY(1,1),
 Descripcion VARCHAR(100) NOT NULL,
-Costo DECIMAL(10, 2) NOT NULL,
+Costo DECIMAL(10, 2) NULL,
 CONSTRAINT PK_Servicio PRIMARY KEY (ID_Servicio)
 );
 
@@ -74,10 +73,19 @@ CONSTRAINT PK_Proveedor PRIMARY KEY (ID_Proveedor)
 );
 
 
+CREATE TABLE Tipo_Producto (
+ID_Tipo_Producto INT IDENTITY(1,1),
+Descripción VARCHAR(100) NOT NULL,
+Especie VARCHAR(25) NOT NULL,
+CONSTRAINT PK_Tipo_Producto PRIMARY KEY (ID_Tipo_Producto)
+);
+
+
+
 CREATE TABLE Producto (
 ID_Producto INT IDENTITY(1,1),
 Marca VARCHAR(50) NOT NULL,
-Nombre VARCHAR(25) NOT NULL,
+Nombre VARCHAR(50) NOT NULL,
 Descripción VARCHAR(100) NULL,
 Costo DECIMAL(10, 2) NOT NULL,
 ID_Proveedor VARCHAR(25),
@@ -85,14 +93,6 @@ ID_Tipo_Producto INT,
 CONSTRAINT PK_Producto PRIMARY KEY (ID_Producto),
 CONSTRAINT FK_Producto_Proveedor FOREIGN KEY (ID_Proveedor) REFERENCES Proveedor (ID_Proveedor),
 CONSTRAINT FK_Producto_Tipo FOREIGN KEY (ID_Tipo_Producto) REFERENCES Tipo_Producto (ID_Tipo_Producto)
-);
-
-
-CREATE TABLE Tipo_Producto (
-ID_Tipo_Producto INT IDENTITY(1,1),
-Descripción VARCHAR(100) NOT NULL,
-Especie VARCHAR(25) NOT NULL,
-CONSTRAINT PK_Tipo_Producto PRIMARY KEY (ID_Tipo_Producto)
 );
 
 
@@ -109,20 +109,22 @@ CREATE TABLE Factura (
 ID_Factura INT IDENTITY(1,1),
 Fecha DATE NOT NULL,
 Total DECIMAL(10, 2) NOT NULL,
-ID_Cliente INT,
+ID_Cliente VARCHAR(25),
 CONSTRAINT PK_Factura PRIMARY KEY (ID_Factura),
-CONSTRAINT FK_Factura_Cliente FOREIGN KEY (ID_Cliente) REFERENCES Cliente(Cédula)
+CONSTRAINT FK_Factura_Cliente FOREIGN KEY (ID_Cliente) REFERENCES Cliente(Cedula)
 );
 
 
-CREATE TABLE Factura_Servicio (
-ID_Factura_Servicio INT IDENTITY(1,1),
+CREATE TABLE Detalle_Factura (
+ID_Detalle_Factura INT IDENTITY(1,1),
 ID_Factura INT,
 ID_Servicio INT,
+ID_Producto INT NULL,
 Cantidad INT,
-CONSTRAINT PK_Factura_Servicio PRIMARY KEY (ID_Factura_Servicio),
-CONSTRAINT FK_Factura_Servicio_Factura FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura),
-CONSTRAINT FK_Factura_Servicio_Servicio FOREIGN KEY (ID_Servicio) REFERENCES Servicio(ID_Servicio)
+CONSTRAINT PK_Detalle_Factura PRIMARY KEY (ID_Detalle_Factura),
+CONSTRAINT FK_Detalle_Factura_Factura FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura),
+CONSTRAINT FK_Detalle_Factura_Servicio FOREIGN KEY (ID_Servicio) REFERENCES Servicio(ID_Servicio),
+CONSTRAINT FK_Detalle_Factura_Producto FOREIGN KEY (ID_Producto) REFERENCES Producto(ID_Producto)
 );
 
 
