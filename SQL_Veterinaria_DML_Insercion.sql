@@ -1,6 +1,7 @@
 
 --INSTRUCCIONES DML - Inserción de Datos
 
+
 INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono)
 VALUES
 ('202790933', 'Ana', 'Castro', 'Ciudad Quesada', '85728260'),
@@ -15,8 +16,7 @@ VALUES
 ('202790936', 'Diego', 'Vargas', 'Pital', '85728263'),
 ('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624'),
 ('506420360', 'Jose', 'Ureña', 'La Tigra', '85017249'),
-('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264')
-;
+('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264');
 
 
 INSERT INTO Mascota (Nombre, Especie, Raza, Genero, Fecha_Nacimiento, Cedula_Cliente) 
@@ -38,21 +38,39 @@ VALUES
 ('Oliver', 'Perro', 'Pomeranian', 'M', '2020-06-01', '301700656'),
 ('Sandy', 'Perro', 'Yorkshire Terrier', 'H', '2018-07-01', '506420360'),
 ('Bella', 'Perro', 'French Bulldog', 'H', '2020-09-01', '502790937'),
-('Chloe', 'Gato', 'Angora', 'H', '2019-11-01', '502790937'),
+('Chloe', 'Gato', 'Angora', 'H', '2019-11-01', '502790937');
+
 
 INSERT INTO Empleado (Cedula, Nombre, Apellido, Posicion)
 VALUES
-();
+('10490456', 'Roberto', 'Gomez', 'Veterinario'),
+('207340954', 'Maria', 'Lopez', 'Asistente'),
+('204060507', 'Mateo', 'Martinez', 'Recepcionista'),
+('302450485', 'Ana', 'Fernandez', 'Veterinario'),
+('104740904', 'Carlos', 'Rodriguez', 'Asistente'),
+('208040975', 'Fernanda', 'Morales', 'Recepcionista'),
+('205040780', 'Sofia', 'Ramirez', 'Asistente'),
+('207720466', 'Gabriela', 'Perez', 'Veterinario');
 
 
 INSERT INTO Servicio (Descripcion, Costo) 
 VALUES 
-();
+('Consulta Veterinaria', 8000),
+('Vacunación', 4500),
+('Cirugía menor', 42700),
+('Cirugía mayor', 63700),
+('Hospitalización', 82000),
+('Radiografía', 24650),
+('Ecografía', 31000),
+('Análisis de laboratorio', 17600),
+('Peluquería canina', 9000);
+('Limpieza dental', 13500),
+('Corte de uñas', 2500);
 
 
 INSERT INTO Cita (Fecha, Hora, Cedula_Cliente, ID_Mascota, Cedula_Empleado) 
 VALUES
-();
+
 
 
 INSERT INTO Proveedor (ID_Proveedor, Nombre, Direccion, Telefono) 

@@ -1,6 +1,7 @@
 
 --INSTRUCCIONES DDL
 
+
 CREATE DATABASE Veterinaria
 
 
@@ -49,12 +50,14 @@ CONSTRAINT PK_Servicio PRIMARY KEY (ID_Servicio)
 
 CREATE TABLE Cita (
 ID_Cita INT IDENTITY(1,1),
+ID_Servicio INT,
 Fecha DATE NOT NULL,
 Hora TIME NOT NULL,
 Cedula_Cliente VARCHAR(25),
 ID_Mascota INT,
 Cedula_Empleado VARCHAR(25),
 CONSTRAINT PK_Cita PRIMARY KEY (ID_Cita),
+CONSTRAINT FK_Cita_Servicio FOREIGN KEY (ID_Servicio) REFERENCES Servicio (ID_Servicio),
 CONSTRAINT FK_Cita_Cliente FOREIGN KEY (Cedula_Cliente) REFERENCES Cliente (Cedula),
 CONSTRAINT FK_Cita_Mascota FOREIGN KEY (ID_Mascota) REFERENCES Mascota (ID_Mascota),
 CONSTRAINT FK_Cita_Empleado FOREIGN KEY (Cedula_Empleado) REFERENCES Empleado (Cedula)
