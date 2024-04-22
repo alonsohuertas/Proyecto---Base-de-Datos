@@ -70,12 +70,26 @@ VALUES
 
 INSERT INTO Cita (Fecha, Hora, Cedula_Cliente, ID_Mascota, Cedula_Empleado) 
 VALUES
+('2024-04-29', '15:30:00', '101700655', 11, '208040975', 6),
+('2024-04-30', '09:00:00', '202790933', 1, '10490456', 1),
+('2024-05-03', '16:00:00', '106420358', 9, '302450485', 4),
+('2024-05-04', '10:00:00', '201700653', 3, '204060507', 3),
+('2024-05-06', '09:30:00', '202790935', 10, '104740904', 5),
+('2024-05-06', '10:30:00', '401700654', 8, '204060507', 3),
+('2024-05-06', '15:00:00', '106420357', 5, '104740904', 5),
+('2024-05-07', '14:00:00', '202790934', 7, '207340954', 2);
 
 
 
 INSERT INTO Proveedor (ID_Proveedor, Nombre, Direccion, Telefono) 
 VALUES 
-();
+('3-101-150452', 'Alimentos San Rafael', 'Alajuela', '22404086'),
+('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela, Costa Rica', '64504756'),
+('3-101-467704', 'Laboratorios H&H', 'Cartago, Costa Rica', '22904534'),
+('3-101-128761', 'Zoofarmaceutica', 'Heredia, Costa Rica', '83107060'),
+('3-102-514394', 'NutriPet', 'San José', '22705684'),
+('3-105-217496', 'Solis Agropecuarios', 'Limón, Costa Rica', '86461657'),
+('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
 
 
 INSERT INTO Producto (Nombre, Descripción, Costo, ID_Proveedor, ID_Tipo_Producto)
