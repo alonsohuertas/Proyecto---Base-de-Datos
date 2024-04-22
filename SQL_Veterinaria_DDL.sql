@@ -124,3 +124,35 @@ CONSTRAINT PK_Factura_Servicio PRIMARY KEY (ID_Factura_Servicio),
 CONSTRAINT FK_Factura_Servicio_Factura FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura),
 CONSTRAINT FK_Factura_Servicio_Servicio FOREIGN KEY (ID_Servicio) REFERENCES Servicio(ID_Servicio)
 );
+
+
+INSERT INTO Inventario (ID_Producto, Cantidad) 
+VALUES 
+(1, 15),
+(2, 16),
+(3, 14),
+(4, 10),
+(5, 26),
+(6, 24),
+(7, 20),
+(8, 25),
+(9, 20),
+(10, 15),
+(11, 16),
+(12, 12),
+(13, 22),
+(14, 18),
+(15, 20),
+(16, 20),
+(17, 8),
+(18, 10),
+(19, 6),
+(20, 35),
+(21, 30),
+(22, 24),
+(23, 20),
+(24, 15),
+(25, 15),
+(26, 20),
+(27, 10),
+(28, 10);
