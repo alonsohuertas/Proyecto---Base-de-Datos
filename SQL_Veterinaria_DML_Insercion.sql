@@ -1,9 +1,22 @@
 
 --INSTRUCCIONES DML - Inserción de Datos
 
-INSERT INTO Cliente (Cedula, Nombre, Apellido, Direccion, Telefono)
+INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono)
 VALUES
-();
+('202790933', 'Ana', 'Castro', 'Ciudad Quesada', '85728260'),
+('201700653', 'Amy', 'Perez', 'Florencia', '60495621'),
+('106420357', 'Mario', 'Rojas', 'Naranjo', '85017246'),
+('202790934', 'Carlos', 'Morales', 'Ciudad Quesada', '85728261'),
+('401700654', 'Luis', 'Fernandez', 'Zarcero', '60495622'),
+('106420358', 'Patricia', 'Mendez', 'Quesada', '85017247'),
+('202790935', 'Gabriela', 'Ramirez', 'Fortuna', '85728262'),
+('101700655', 'Ricardo', 'Gonzalez', 'Venecia', '60495623'),
+('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248'),
+('202790936', 'Diego', 'Vargas', 'Pital', '85728263'),
+('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624'),
+('506420360', 'Jose', 'Ureña', 'La Tigra', '85017249'),
+('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264')
+;
 
 
 INSERT INTO Mascota (ID_Mascota, Nombre, Especie, Raza, Genero, Fecha_Nacimiento, Cedula_Cliente) 
