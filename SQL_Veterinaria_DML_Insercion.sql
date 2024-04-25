@@ -1,5 +1,5 @@
 
---INSTRUCCIONES DML - Inserción de Datos
+--INSTRUCCIONES DML - Inserciï¿½n de Datos
 
 
 INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono, Correo)
@@ -15,7 +15,7 @@ VALUES
 ('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248', 'sofia.navarro@outlook.com'),
 ('202790936', 'Diego', 'Vargas', 'Pital', '85728263', 'diego.vargas@gmail.com'),
 ('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624', 'andrea.salazar@hotmail.com'),
-('506420360', 'Jose', 'Ureña', 'La Tigra', '85017249', 'jose.urena@outlook.com'),
+('506420360', 'Jose', 'Ureï¿½a', 'La Tigra', '85017249', 'jose.urena@outlook.com'),
 ('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264', 'daniela.quesada@gmail.com');
 
 
@@ -57,16 +57,16 @@ INSERT INTO Servicio (Descripcion, Costo)
 VALUES 
 ('Compra de Productos', NULL),
 ('Consulta Veterinaria', 8000),
-('Vacunación', 4500),
-('Cirugía menor', 42700),
-('Cirugía mayor', 63700),
-('Hospitalización', 82000),
-('Radiografía', 24650),
-('Ecografía', 31000),
-('Análisis de laboratorio', 17600),
-('Peluquería canina', 9000),
+('Vacunaciï¿½n', 4500),
+('Cirugï¿½a menor', 42700),
+('Cirugï¿½a mayor', 63700),
+('Hospitalizaciï¿½n', 82000),
+('Radiografï¿½a', 24650),
+('Ecografï¿½a', 31000),
+('Anï¿½lisis de laboratorio', 17600),
+('Peluquerï¿½a canina', 9000),
 ('Limpieza dental', 13500),
-('Corte de uñas', 2500);
+('Corte de uï¿½as', 2500);
 
 
 INSERT INTO Cita (Fecha, Hora, Cedula_Cliente, ID_Mascota, Cedula_Empleado) 
@@ -87,12 +87,12 @@ VALUES
 ('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela, Costa Rica', '64504756'),
 ('3-101-467704', 'Laboratorios H&H', 'Cartago, Costa Rica', '22904534'),
 ('3-101-128761', 'Zoofarmaceutica', 'Heredia, Costa Rica', '83107060'),
-('3-102-514394', 'NutriPet', 'San José', '22705684'),
-('3-105-217496', 'Solis Agropecuarios', 'Limón, Costa Rica', '86461657'),
+('3-102-514394', 'NutriPet', 'San Josï¿½', '22705684'),
+('3-105-217496', 'Solis Agropecuarios', 'Limï¿½n, Costa Rica', '86461657'),
 ('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
 
 
-INSERT INTO Tipo_Producto (Descripción, Especie) 
+INSERT INTO Tipo_Producto (Descripciï¿½n, Especie) 
 VALUES 
 ('Alimento', 'Perro'),
 ('Alimento', 'Gato'),
@@ -104,7 +104,7 @@ VALUES
 ('Producto de Aseo', 'Gato');
 
 
-INSERT INTO Producto (Marca, Nombre, Descripción, Costo, ID_Proveedor, ID_Tipo_Producto)
+INSERT INTO Producto (Marca, Nombre, Descripciï¿½n, Costo, ID_Proveedor, ID_Tipo_Producto)
 VALUES 
 ('NutriSource', 'Chicken & Rice', 'Alimento Adultos', 11200, '3-102-514394', 1),
 ('NutriSource', 'S&M Chicken & Rice', 'Alimento Cachorros', 13000, '3-102-514394', 1),
@@ -118,7 +118,7 @@ VALUES
 ('NutriSource', 'Cat & Kitten Chicken & Rice', 'Alimento Adultos', 12200, '3-102-514394', 2),
 ('1st Choice', 'Indoor Vitality', 'Alimento Adultos', 14200, '3-102-514394', 2),
 ('1st Choice', 'Healthy Start', 'Alimento Cachorros', 12200, '3-102-514394', 2),
-('Purina', 'Cat Chow Adultos Hogareños', 'Alimento Adultos', 6100, '3-101-150452', 2),
+('Purina', 'Cat Chow Adultos Hogareï¿½os', 'Alimento Adultos', 6100, '3-101-150452', 2),
 ('Purina', 'Cat Chow Gatitos', 'Alimento Cachorros', 7100, '3-101-150452', 2),
 ('Whiskas', 'Pescado', 'Alimento Adultos', 5700, '3-101-150452', 2),
 ('Whiskas', 'Carne', 'Alimento Adultos', 5600, '3-101-150452', 2),
@@ -176,6 +176,9 @@ INSERT INTO Factura (Fecha, Total, ID_Cliente)
 VALUES 
 ('2024-04-29', 12500, '101700655'),
 ('2024-04-30', 16100, '202790933'),
+('2024-04-30', 24650, '502790937'),
+('2024-05-03', 8500, '202790935'),
+('2024-05-06', 32600, '106420357')
 
 
 INSERT INTO Detalle_Factura (ID_Factura, ID_Servicio, ID_Producto, Cantidad) 
@@ -184,3 +187,8 @@ VALUES
 (1, 3, NULL, 1),
 (2, 10, NULL, 1),
 (2, 1, 14, 1),
+(3, 7, NULL, 1),
+(4, 12, NULL, 1),
+(4, 1, 7, 1),
+(5, 1, 22, 2),
+(5, 1, 16, 2)
