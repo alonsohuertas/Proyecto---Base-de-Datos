@@ -75,7 +75,7 @@ CONSTRAINT PK_Proveedor PRIMARY KEY (ID_Proveedor)
 
 CREATE TABLE Tipo_Producto (
 ID_Tipo_Producto INT IDENTITY(1,1),
-Descripción VARCHAR(100) NOT NULL,
+Descripcion VARCHAR(100) NOT NULL,
 Especie VARCHAR(25) NOT NULL,
 CONSTRAINT PK_Tipo_Producto PRIMARY KEY (ID_Tipo_Producto)
 );
@@ -86,7 +86,7 @@ CREATE TABLE Producto (
 ID_Producto INT IDENTITY(1,1),
 Marca VARCHAR(50) NOT NULL,
 Nombre VARCHAR(50) NOT NULL,
-Descripción VARCHAR(100) NULL,
+Descripcion VARCHAR(100) NULL,
 Costo DECIMAL(10, 2) NOT NULL,
 ID_Proveedor VARCHAR(25),
 ID_Tipo_Producto INT,
