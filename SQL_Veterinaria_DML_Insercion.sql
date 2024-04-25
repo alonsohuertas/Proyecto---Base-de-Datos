@@ -1,5 +1,5 @@
 
---INSTRUCCIONES DML - Inserci�n de Datos
+--INSTRUCCIONES DML - Insercion de Datos
 
 
 INSERT INTO Cliente (Cedula, Nombre, Apellido, Ciudad, Telefono, Correo)
@@ -9,7 +9,7 @@ VALUES
 ('106420357', 'Mario', 'Rojas', 'Naranjo', '85017246', 'mario.rojas@outlook.com'),
 ('202790934', 'Carlos', 'Morales', 'Ciudad Quesada', '85728261', 'carlos.morales@gmail.com'),
 ('401700654', 'Luis', 'Fernandez', 'Zarcero', '60495622', 'luis.fernandez@hotmail.com'),
-('106420358', 'Patricia', 'Mendez', 'Quesada', '85017247', 'patricia.mendez@outlook.com'),
+('106420358', 'Patricia', 'Mendez', 'Ciudad Quesada', '85017247', 'patricia.mendez@outlook.com'),
 ('202790935', 'Gabriela', 'Ramirez', 'Fortuna', '85728262', 'gabriela.ramirez@gmail.com'),
 ('101700655', 'Ricardo', 'Gonzalez', 'Venecia', '60495623', 'ricardo.gonzalez@hotmail.com'),
 ('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248', 'sofia.navarro@outlook.com'),
@@ -84,11 +84,11 @@ VALUES
 INSERT INTO Proveedor (ID_Proveedor, Nombre, Ciudad, Telefono) 
 VALUES 
 ('3-101-150452', 'Alimentos San Rafael', 'Alajuela', '22404086'),
-('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela, Costa Rica', '64504756'),
-('3-101-467704', 'Laboratorios H&H', 'Cartago, Costa Rica', '22904534'),
-('3-101-128761', 'Zoofarmaceutica', 'Heredia, Costa Rica', '83107060'),
+('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela', '64504756'),
+('3-101-467704', 'Laboratorios H&H', 'Cartago', '22904534'),
+('3-101-128761', 'Zoofarmaceutica', 'Heredia', '83107060'),
 ('3-102-514394', 'NutriPet', 'San Jos�', '22705684'),
-('3-105-217496', 'Solis Agropecuarios', 'Lim�n, Costa Rica', '86461657'),
+('3-105-217496', 'Solis Agropecuarios', 'Lim�n', '86461657'),
 ('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
 
 
@@ -135,10 +135,6 @@ VALUES
 ('Vanguard', 'Plus 5', 'Vacuna', 8450, '3-101-128761', 4),
 ('Canigen', 'MHA2L Triple', 'Vacuna', 9300, '3-101-128761', 4);
 
-
-select * from producto
-delete from producto
-select * from tipo_producto
 
 INSERT INTO Inventario (ID_Producto, Cantidad) 
 VALUES 
