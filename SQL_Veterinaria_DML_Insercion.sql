@@ -15,7 +15,7 @@ VALUES
 ('106420359', 'Sofia', 'Navarro', 'Aguas Zarcas', '85017248', 'sofia.navarro@outlook.com'),
 ('202790936', 'Diego', 'Vargas', 'Pital', '85728263', 'diego.vargas@gmail.com'),
 ('301700656', 'Andrea', 'Salazar', 'Santa Rosa', '60495624', 'andrea.salazar@hotmail.com'),
-('506420360', 'Jose', 'Ure�a', 'La Tigra', '85017249', 'jose.urena@outlook.com'),
+('506420360', 'Jose', 'Urena', 'La Tigra', '85017249', 'jose.urena@outlook.com'),
 ('502790937', 'Daniela', 'Quesada', 'Los Chiles', '85728264', 'daniela.quesada@gmail.com');
 
 
@@ -57,16 +57,16 @@ INSERT INTO Servicio (Descripcion, Costo)
 VALUES 
 ('Compra de Productos', NULL),
 ('Consulta Veterinaria', 8000),
-('Vacunaci�n', 4500),
-('Cirug�a menor', 42700),
-('Cirug�a mayor', 63700),
-('Hospitalizaci�n', 82000),
-('Radiograf�a', 24650),
-('Ecograf�a', 31000),
-('An�lisis de laboratorio', 17600),
-('Peluquer�a canina', 9000),
+('Vacunacion', 4500),
+('Cirugia menor', 42700),
+('Cirugia mayor', 63700),
+('Hospitalizacion', 82000),
+('Radiografia', 24650),
+('Ecografia', 31000),
+('Analisis de laboratorio', 17600),
+('Peluqueria canina', 9000),
 ('Limpieza dental', 13500),
-('Corte de u�as', 2500);
+('Corte de unas', 2500);
 
 
 INSERT INTO Cita (Fecha, Hora, Cedula_Cliente, ID_Mascota, Cedula_Empleado) 
@@ -87,12 +87,12 @@ VALUES
 ('3-105-430489', 'Suministros Veterinarios S.A.', 'Alajuela', '64504756'),
 ('3-101-467704', 'Laboratorios H&H', 'Cartago', '22904534'),
 ('3-101-128761', 'Zoofarmaceutica', 'Heredia', '83107060'),
-('3-102-514394', 'NutriPet', 'San Jos�', '22705684'),
-('3-105-217496', 'Solis Agropecuarios', 'Lim�n', '86461657'),
+('3-102-514394', 'NutriPet', 'San Jose', '22705684'),
+('3-105-217496', 'Solis Agropecuarios', 'Limon', '86461657'),
 ('3-101-234704', 'VetPharma Solutions', 'Cartago', '86106575');
 
 
-INSERT INTO Tipo_Producto (Descripci�n, Especie) 
+INSERT INTO Tipo_Producto (Descripcion, Especie) 
 VALUES 
 ('Alimento', 'Perro'),
 ('Alimento', 'Gato'),
@@ -104,7 +104,7 @@ VALUES
 ('Producto de Aseo', 'Gato');
 
 
-INSERT INTO Producto (Marca, Nombre, Descripci�n, Costo, ID_Proveedor, ID_Tipo_Producto)
+INSERT INTO Producto (Marca, Nombre, Descripcion, Costo, ID_Proveedor, ID_Tipo_Producto)
 VALUES 
 ('NutriSource', 'Chicken & Rice', 'Alimento Adultos', 11200, '3-102-514394', 1),
 ('NutriSource', 'S&M Chicken & Rice', 'Alimento Cachorros', 13000, '3-102-514394', 1),
@@ -118,7 +118,7 @@ VALUES
 ('NutriSource', 'Cat & Kitten Chicken & Rice', 'Alimento Adultos', 12200, '3-102-514394', 2),
 ('1st Choice', 'Indoor Vitality', 'Alimento Adultos', 14200, '3-102-514394', 2),
 ('1st Choice', 'Healthy Start', 'Alimento Cachorros', 12200, '3-102-514394', 2),
-('Purina', 'Cat Chow Adultos Hogare�os', 'Alimento Adultos', 6100, '3-101-150452', 2),
+('Purina', 'Cat Chow Adultos Hogarenos', 'Alimento Adultos', 6100, '3-101-150452', 2),
 ('Purina', 'Cat Chow Gatitos', 'Alimento Cachorros', 7100, '3-101-150452', 2),
 ('Whiskas', 'Pescado', 'Alimento Adultos', 5700, '3-101-150452', 2),
 ('Whiskas', 'Carne', 'Alimento Adultos', 5600, '3-101-150452', 2),
